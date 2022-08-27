@@ -4,7 +4,7 @@ import Interface.CanDo;
 import ShablonPeople.*;
 import ShablonAnimal.*;
 import ShablonTechnique.*;
-
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -16,10 +16,8 @@ public class Main {
         } else if (number == 2) {
             method2();
         } else {
-            System.out.println("Андай метод жок елки!!!!!!!!");
+            System.out.println("Андай метод жок !!!!!!!!");
         }
-
-
 
     }
     public static void method1() {
@@ -27,6 +25,8 @@ public class Main {
     }
     public static void firstMethod() {
         Scanner sc = new Scanner(System.in);
+        Random random = new Random();
+
         Animal cat = new Cat(111111,"Джеси",2,true);
         Animal dog = new Dog(222222,"Rex",3,true);
         Animal eagle1 = new Eagle(333333,"Sancho",1,false);
@@ -180,60 +180,124 @@ public class Main {
                 System.out.println("\n\n");
             }
         }
-
         System.out.println("\n\n\n");
         for (int i = 0; i < 3; i++) {
             System.out.println("Ат жаз:");
             String soz = sc.nextLine();
             if (person1.getName().equals(soz)) {
-                for (Animal p:person1.animals) {
-                    System.out.println("Айди = "+p.getId() );
-                    System.out.println("Аты = "+p.getName() );
-                    System.out.println("Жашы = "+p.getAge() );
-                    System.out.println("Домашние = "+p.getDomesticAnimal() );
+                for (int j = 0; j < animals.length; j++) {
+                    int num = random.nextInt(0,animals.length);
+                    if (animals[num] != null) {
+                    System.out.println(animals[num] );
                     System.out.println("--------------------------");
+                    animals[num] = null;
+                    } else {
+                        while (true) {
+                            num = random.nextInt(0,animals.length);
+                            if (animals[num] != null) {
+                                break;
+                            }
+                        }
+                        System.out.println(animals[num]);
+                        System.out.println("--------------------------");
+                        animals[num] = null;
+                    }
                 }
                 System.out.println("\n\n\n");
-                for (Technique t:person1.techniques) {
-                    System.out.println("id = "+t.getId() );
-                    System.out.println("name = "+t.getName() );
-                    System.out.println("year = "+t.getYear() );
-                    System.out.println("model = "+t.getModel() );
-                    System.out.println("---------------------------");
+                for (int j = 0; j < techniques.length; j++) {
+                    int number = random.nextInt(0,techniques.length);
+                    if (techniques[number] != null) {
+                        System.out.println(techniques[number]);
+                        System.out.println("---------------------------");
+                        techniques[number] = null;
+                    } else {
+                        while (true) {
+                            number = random.nextInt(0,techniques.length);
+                            if (techniques[number] != null) {
+                                break;
+                            }
+                        }
+                        System.out.println(techniques[number]);
+                        System.out.println("---------------------------");
+                        techniques[number] = null;
+                    }
                 }
             } else if (person2.getName().equals(soz)) {
-                for (Animal p:person2.animals) {
-                    System.out.println("Айди = "+p.getId() );
-                    System.out.println("Аты = "+p.getName() );
-                    System.out.println("Жашы = "+p.getAge() );
-                    System.out.println("Домашние = "+p.getDomesticAnimal() );
-                    System.out.println("--------------------------");
+                for (int j = 0; j < animalss.length; j++) {
+                    int num = random.nextInt(0, animalss.length);
+                    if (animalss[num] != null) {
+                        System.out.println(animalss[num]);
+                        System.out.println("--------------------------");
+                        animalss[num] = null;
+                    } else {
+                        while (true) {
+                            num = random.nextInt(0, animalss.length);
+                            if (animalss[num] != null) {
+                                break;
+                            }
+                        }
+                        System.out.println(animalss[num]);
+                        System.out.println("--------------------------");
+                        animalss[num] = null;
+                    }
                 }
                 System.out.println("\n\n\n");
-                for (Technique t:person2.techniques) {
-                    System.out.println("id = "+t.getId() );
-                    System.out.println("name = "+t.getName() );
-                    System.out.println("year = "+t.getYear() );
-                    System.out.println("model = "+t.getModel() );
-                    System.out.println("---------------------------");
+                for (int j = 0; j < technique.length; j++) {
+                    int num = random.nextInt(0,technique.length);
+                    if (technique[num] != null) {
+                        System.out.println(technique[num]);
+                        System.out.println("---------------------------");
+                        technique[num] = null;
+                    } else {
+                        while (true) {
+                            num = random.nextInt(0,technique.length);
+                            if (technique[num] != null) {
+                                break;
+                            }
+                        }
+                        System.out.println(technique[num]);
+                        System.out.println("---------------------------");
+                        technique[num] = null;
+                    }
                 }
             } else if (person3.getName().equals(soz)) {
-                for (Animal p:person3.animals) {
-                    System.out.println("Айди = "+p.getId() );
-                    System.out.println("Аты = "+p.getName() );
-                    System.out.println("Жашы = "+p.getAge() );
-                    System.out.println("Домашние = "+p.getDomesticAnimal() );
-                    System.out.println("--------------------------");
+                for (int j = 0; j < animals16.length; j++) {
+                    int num = random.nextInt(0,animals16.length);
+                    if (animals16[num] != null) {
+                        System.out.println(animals16[num]);
+                        System.out.println("---------------------------");
+                        animals16[num] = null;
+                    } else {
+                        while (true) {
+                            num = random.nextInt(0,animals16.length);
+                            if (animals16[num] != null) {
+                                break;
+                            }
+                        }
+                        System.out.println(animals16[num]);
+                        System.out.println("---------------------------");
+                        animals16[num] = null;
+                    }
                 }
                 System.out.println("\n\n\n");
-                for (Technique t:person3.techniques) {
-                    System.out.println("id = "+t.getId() );
-                    System.out.println("name = "+t.getName() );
-                    System.out.println("year = "+t.getYear() );
-                    System.out.println("model = "+t.getModel() );
-                    System.out.println("---------------------------");
+                for (int j = 0; j < techniques9.length; j++) {
+                    int num = random.nextInt(0,techniques9.length);
+                    if (techniques9[num] != null) {
+                        System.out.println(techniques9[num]);
+                        System.out.println("---------------------------");
+                        techniques9[num] = null;
+                    } else {
+                        while (true) {
+                            num = random.nextInt(0,techniques9.length);
+                            if (techniques9[num] != null) {
+                                break;
+                            }
+                        }
+                        System.out.println(techniques9[num]);
+                        System.out.println("---------------------------");
+                        techniques9[num] = null;
+                    }
                 }
-
             } else {
                 System.out.println("Жашоо керемет!");
             }

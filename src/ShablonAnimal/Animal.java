@@ -73,6 +73,12 @@ public abstract class Animal  {
     public abstract void whatDoesItEat();
     public abstract void whereDoesItLive();
 
-
-
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", domesticAnimal=" + domesticAnimal + '}';
+    }
 }
